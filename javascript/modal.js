@@ -74,19 +74,3 @@ var imagenes = new Vue({
     }
 })
 
-var imagenesC = [
-    'img/gal_fotos/IMG-20200912-WA0001.jpg',
-    'img/gal_fotos/IMG-20200912-WA0002.jpg',
-    'img/gal_fotos/IMG-20200912-WA0003.jpg',
-    'img/gal_fotos/IMG-20200912-WA0004.jpg',
-    'img/gal_fotos/IMG-20200912-WA0005.jpg',
-    'img/gal_fotos/IMG-20200912-WA0006.jpg',
-    'img/gal_fotos/IMG-20200912-WA0008.jpg',
-    'img/gal_fotos/IMG-20200912-WA0009.jpg',
-    'img/gal_fotos/IMG-20200912-WA00010.jpg',
-    'img/gal_fotos/IMG-20200912-WA00011.jpg',
-    'img/gal_fotos/IMG-20200912-WA00012.jpg',
-    'img/gal_fotos/IMG-20200912-WA00013.jpg',
-    'img/gal_fotos/IMG-20200912-WA00014.jpg',
-    'img/gal_fotos/IMG-20200912-WA00015.jpg'
-]

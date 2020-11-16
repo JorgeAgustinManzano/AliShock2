@@ -1,4 +1,22 @@
 
+var imgC = [
+    'img/gal_fotos/IMG-20200912-WA0008.jpg',
+    'img/gal_fotos/IMG-20200912-WA0009.jpg',
+    'img/gal_fotos/IMG-20200912-WA0010.jpg',
+    'img/gal_fotos/IMG-20200912-WA0011.jpg',
+    'img/gal_fotos/IMG-20200912-WA0012.jpg',
+    'img/gal_fotos/IMG-20200912-WA0013.jpg',
+    'img/gal_fotos/IMG-20200912-WA0014.jpg',
+    'img/gal_fotos/IMG-20200912-WA0015.jpg',
+    'img/gal_fotos/IMG-20200912-WA0001.jpg',
+    'img/gal_fotos/IMG-20200912-WA0002.jpg',
+    'img/gal_fotos/IMG-20200912-WA0003.jpg',
+    'img/gal_fotos/IMG-20200912-WA0004.jpg',
+    'img/gal_fotos/IMG-20200912-WA0005.jpg',
+    'img/gal_fotos/IMG-20200912-WA0006.jpg'
+]
+
+
 let encabezado =
 `<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar color-nav">
         <div class="container">
@@ -44,7 +62,7 @@ let encabezado =
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Videos</a>
-                            <a class="dropdown-item" href="#">Fotos</a>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#modalPush2" href="#">Fotos</a>
                             <a class="dropdown-item" href="#">Otros</a>
                         </div>
                     </li>
@@ -167,8 +185,9 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
 </div>
 </div>
 `
-let modalMultimedia = 
-`
+
+let modalCarrusel =
+    `
 <div class="modal fade bd-example-modal-lg" id="modalPush2" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -184,57 +203,23 @@ let modalMultimedia =
                 </div>
 
                 <!--Body-->
-                <div class="modal-body">
+                <div class="modal-body bodyCarrusel">
 
                     <div class="row">
                         <div class="col-12" id="imagen-modal">
-                            
-                            <div class="banner">
-                                <section id="dg-container" class="dg-container">
-                                    <div class="dg-wrapper">`  
-                                        // <a href="#">
-                                        //     <img src="img/gal_fotos/IMG-20200912-WA0001.jpg">
-                                        // </a>
-                                        // <a href="#">
-                                        //     <img src="img/gal_fotos/IMG-20200912-WA0002.jpg">
-                                        // </a>
-                                        // <a href="#">
-                                        //     <img src="img/gal_fotos/IMG-20200912-WA0003.jpg">
-                                        // </a>
-                                        // <a href="#">
-                                        //     <img src="img/gal_fotos/IMG-20200912-WA0004.jpg">
-                                        // </a>
-                                        // <a href="#">
-                                        //     <img src="img/gal_fotos/IMG-20200912-WA0005.jpg">
-                                        // </a>
-                                        // <a href="#">
-                                        //     <img src="img/gal_fotos/IMG-20200912-WA0006.jpg">
-                                        // </a>
-                                        // <a href="#">
-                                        //     <img src="img/gal_fotos/IMG-20200912-WA0007.jpg">
-                                        // </a>
-                                        // <a href="#">
-                                        //     <img src="img/gal_fotos/IMG-20200912-WA0008.jpg">
-                                        // </a>
-                                    `</div>
-                                    <div class="control"></div><!--esto lo agrego para que no me de error-->
-                                    <ol class="button" id="lightButton">`
-                                        // <li index="0">
-                                        // <li index="1">
-                                        // <li index="2">
-                                        // <li index="3">
-                                        // <li index="4">
-                                        // <li index="5">
-                                        // <li index="6">
-                                        // <li index="7">
-                                    `</ol>
-                                    <nav>
-                                        <span class="dg-prev"></span>
-                                        <span class="dg-next"></span>
-                                    </nav>
-                                </section>
-                            </div>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
 
+                                    `
+for (let i = 0; i < imgC.length; i++) {
+    modalCarrusel += `<div class="swiper-slide" style="background-image:url(${imgC[i]})">
+                        </div>`
+}
+modalCarrusel += `
+                                    <div class="swiper-pagination">
+                                    </div>
+                                </div>
+                            </div>    
                         </div>
                     </div>
                 </div>
@@ -243,12 +228,13 @@ let modalMultimedia =
                 </div>
             </div>
         </div>
-    </div>`
+    </div>
+    `
 
 
 document.getElementById('idHeader').innerHTML = encabezado;
-// document.getElementById('seccion').innerHTML = nosotros;
 document.getElementById('modalServ').innerHTML = modalServicios;
 document.getElementById('modalNosotros').innerHTML = modalNosotros;
+document.getElementById('modalCarrusel').innerHTML = modalCarrusel;
 document.getElementById('idFooter').innerHTML = pieDePagina;
 

@@ -381,7 +381,7 @@ $(function () {
 
                         this.$nextItm.addClass(speedClass).css(this._getCoordinates('right'));
 
-                        if (this.itemsCount > 8) {
+                        if (this.itemsCount > imagenesC.length) {
                             this.$prevItm.addClass(speedClass).css(this._getCoordinates('hide'));
                             this.$prevItm.off('click.carrousel');
                         }
@@ -410,7 +410,7 @@ $(function () {
 
                         this.$prevItm.addClass(speedClass).css(this._getCoordinates('left'));
 
-                        if (this.itemsCount > 8) {
+                        if (this.itemsCount > imagenesC.length) {
                             this.$nextItm.addClass(speedClass).css(this._getCoordinates('hide'));
                             this.$nextItm.off('click.carrousel');
                         }
