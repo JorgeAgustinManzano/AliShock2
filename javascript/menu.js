@@ -16,6 +16,18 @@ var imgC = [
     'img/gal_fotos/IMG-20200912-WA0006.jpg'
 ]
 
+var videoC = [
+    '<iframe class="videos" src="https://www.youtube.com/embed/I5J9pTxr5Ds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe class="videos" src="https://www.youtube.com/embed/FNRofX1Ja4U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe class="videos" src="https://www.youtube.com/embed/9xM3YCTVTRo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe class="videos" src="https://www.youtube.com/embed/z7JwE7kDTxw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe class="videos" src="https://www.youtube.com/embed/WDj86MKk8ok" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe class="videos" src="https://www.youtube.com/embed/nJEKnLNN9j4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe class="videos" src="https://www.youtube.com/embed/hxWRA6kUIow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe class="videos" src="https://www.youtube.com/embed/a3Pm4YcIPZg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    '<iframe class="videos" src="https://www.youtube.com/embed/ozIkvOQRDmM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+]
+
 
 let encabezado =
 `<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar color-nav">
@@ -124,10 +136,10 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-body">
 
             <div class="row">
-                <div class="col-5" id="imagen-modal">
+                <div class="col-sm-5" id="imagen-modal">
                     <img :src = "imagenM" width="90%" alt="">
                 </div>
-                <div class="col-7" id="app-modal">
+                <div class="col-sm-7" id="app-modal">
                     <p><strong>{{titulo}}</strong></p>
                     <p class="text-justify">{{descripcion}}</p>
                 </div>
@@ -159,11 +171,11 @@ aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-body">
 
             <div class="row">
-                <div class="col-4" id="imagen-modal">
-                    <img src="img/nosotros.jpg" width="90%" alt="">
+                <div class="col-sm-4" id="imagen-modal">
+                    <img src="img/nosotros.jpg" width="90%" class="mx-auto d-block" alt="">
                 </div>
-                <div class="col-8" id="app-modal1">
-                    <p class="text-justify">
+                <div class="col-sm-8" id="app-modal1">
+                    <p class="text-justify nosotros">
                         Alishock nació en el año 2016 con el propósito de realzar la belleza natural de cada
                         persona.
                         Nuestra misión es obtener la imagen deseada por los clientes, fortificando su
@@ -216,14 +228,14 @@ for (let i = 0; i < imgC.length; i++) {
                         </div>`
 }
 modalCarrusel += `
-                                    <div class="swiper-pagination">
-                                    </div>
+                                    <div class="swiper-pagination"></div>
                                 </div>
                             </div>    
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <p class="footer-modal-texto">Utilizar la manito para cambiar las imagenes</p>
                     <button type="button" class="btn btn-dark btn-sm float-right" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
