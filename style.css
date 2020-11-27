@@ -1,6 +1,6 @@
 *{
-    font-family: 'Mitr', sans-serif;
-    /* font-family: 'Neucha', cursive; */
+    /* font-family: 'Mitr', sans-serif; */
+    font-family: 'Neucha', cursive;
 }
 body{
     height: 100%;
@@ -33,18 +33,18 @@ body{
     box-shadow: 0 0 10px #f5f2f2
 }
 .nosotros{
-    margin-right: 3rem;
-    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
 }
 #footer-title{
     font-size: 1.2rem;
 }
-footer {
+footer{
     background-color: black;
     position: absolute;
     bottom: -5rem;
     width: 100%;
-    /* height: 40px; */
+    height: 70px;
     color: white;
   }
 
@@ -64,13 +64,13 @@ footer {
 
 .heading{
     color: white!important;
-    font-size: xx-large;
+    font-size: x-large;
 }
 .modal-content{
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
 }
 .modal-lg {
-    max-width: 90% !important;
+    max-width: 75% !important;
 }
 #app-modal1 p, #app-modal p{
     color: white!important;
@@ -83,9 +83,12 @@ footer {
 #modalPush{
     margin-top: 1.6rem!important;
 }
-.carousel-inner div img{
-    max-width:500px;
+.modal-content, #imagen-modal img{
+    box-shadow: 0 0 15px #4f4f52!important;
 }
+/* .carousel-inner div img{
+    max-width:500px;
+} */
 
 @media screen and (max-width:990px){
     .dropdown-menu{
@@ -109,6 +112,7 @@ footer {
         font-size: large;
     }
     #app-modal1 p, #app-modal p{
+        margin-top: 1rem;
         font-size: medium!important;
     }
 }

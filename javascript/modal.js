@@ -73,4 +73,3 @@ var imagenes = new Vue({
         }
     }
 })
-

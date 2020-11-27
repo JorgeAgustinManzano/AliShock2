@@ -1,0 +1,86 @@
+/*Carrusel con desplazamiento responsive*/
+.wrapper{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.item{
+  height: 21rem;
+  border: 2px groove gray;
+  background-size: cover 
+
+}
+
+.owl-prev span, .owl-next span{
+  padding-right: .5rem;
+  padding-left: .5rem;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  font-size: large;
+}
+
+
+iframe{
+  margin: 1rem!important;
+  width:80%;
+  height: 23rem;
+  box-shadow: 0 0 15px #4f4f52!important;
+}
+#carousel-thumb{
+height: 27rem;
+}
+.carousel-control-prev-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")!important; 
+  } 
+    
+.carousel-control-next-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")!important; 
+  }
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover { 
+  transform: scale(2)
+}
+
+.carousel-control-prev, .carousel-control-next{
+  width: 5.6rem;
+}
+
+@media screen and (max-width:990px){
+  .carousel-control-prev, .carousel-control-next{
+    width: 4rem;
+  }
+  iframe{
+    height: 18rem;
+  }
+  #carousel-thumb{
+    height: 22rem;
+    }
+}
+
+@media screen and (max-width:767px){
+  .carousel-control-prev, .carousel-control-next{
+    width: 3rem;
+  }
+  iframe{
+    height: 15rem;
+  }
+  #carousel-thumb{
+    height: 19rem;
+    }
+}
+
+
+@media screen and (max-width:575px){
+  .carousel-control-prev, .carousel-control-next{
+    width: 2rem;
+  }
+  iframe{
+    height: 12rem;
+  }
+  #carousel-thumb{
+    height: 16rem;
+    }
+
+}
