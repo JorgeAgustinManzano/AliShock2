@@ -11,11 +11,19 @@ body{
     background-size: cover;
     background-color: #000;
 }
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu .dropdown-menu {
+    top:0;
+    left:100%;
+}
 .dropdown-menu{
     background:rgba(56, 56, 56, 0.6)!important;  
 }
 .navbar{
     background:rgba(56, 56, 56, 0.4)!important;  
+    box-shadow: 0 0 10px #4f4f52!important;
 }
 .top-nav-collapse{
     background:rgba(56, 56, 56, 0.8)!important;
@@ -36,16 +44,18 @@ body{
     margin-right: 2rem;
     margin-left: 1rem;
 }
-#footer-title{
-    font-size: 1.2rem;
-}
+/* #footer-title{
+    font-size: .8rem!important;
+} */
 footer{
     background-color: black;
+    font-family: 'Mitr', sans-serif;
     position: absolute;
     bottom: -5rem;
     width: 100%;
     height: 70px;
     color: white;
+    box-shadow: 0 0 10px #4f4f52!important;
   }
 
 /*animacion del DropDown*/
@@ -105,6 +115,9 @@ footer{
         color: white!important;
         font-size: large!important;
     }
+    .modal-lg {
+        max-width: 80% !important;
+    }
 }
 
 @media screen and (max-width:767px){
@@ -115,8 +128,13 @@ footer{
         margin-top: 1rem;
         font-size: medium!important;
     }
+    .modal-lg {
+        max-width: 90% !important;
+    }
 }
 
 @media screen and (max-width:575px){
-
+    .modal-lg {
+        max-width: 100% !important;
+    }
 }
